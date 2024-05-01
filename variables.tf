@@ -31,3 +31,4 @@ variable "virtual_memory" {
 variable "cluster_domain" {
   description = "The domain of the cluster"
   type        = string
+}
