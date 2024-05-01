@@ -44,7 +44,6 @@ data "template_file" "vm-configs" {
   for_each = toset(var.machines)
   template = file("${path.module}/configs/machine-${each.key}-config.yaml.tmpl")
 
-
   vars = {
     ssh_keys     = jsonencode(var.ssh_keys)
     name         = each.key
